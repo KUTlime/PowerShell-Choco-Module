@@ -13,13 +13,19 @@
 ## Use
 
 ```powershell
-Install-Module Choco -Force; ich
+Install-Module Choco; ich
 ```
 
 or for clarity
 
 ```powershell
-Install-Module Choco -Force; Install-Choco
+Install-Module Choco; Install-Choco
+```
+
+or with module cleanup
+
+```powershell
+Install-Module Choco; Install-Choco; Uninstall-Module Choco
 ```
 
 ## FAQ
