@@ -12,5 +12,5 @@ if ($psGetModule.Version -lt $minimalPSGetVersion)
 {
     Install-Module -Name $psGet -MinimumVersion '2.2.3'
 }
-
-Publish-Module -Name (Get-ChildItem -Path $PSScriptRoot -Recurse -File -Filter '*.psm1') -NuGetApiKey asdf
+$moduleDir = (Get-ChildItem -Path . -Recurse -File -Filter '*.psm1').Directory.FullName
+Publish-Module -Name $moduleDir -NuGetApiKey $nugetApiKey
