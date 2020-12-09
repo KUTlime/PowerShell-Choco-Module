@@ -12,6 +12,13 @@
 
 ## Use
 
+You have to enable module installation by setting execution policy `ByPass`. The easiest way is to execute
+
+```powershell
+Start-Process -FilePath powershell -ArgumentList "-ExecutionPolicy ByPass"
+```
+and you can type following in this new PowerShell console window
+
 ```powershell
 Install-Module Choco; ich
 ```
